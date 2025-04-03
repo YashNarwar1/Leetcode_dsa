@@ -63,9 +63,11 @@ const converToInt = (s) => {
 
   while (i < n) {
     if (i < n - 1 && d[s[i]] < d[s[i + 1]]) {
+      // negative case
       summ += d[s[i + 1]] - d[s[i]];
       i += 2;
     } else {
+      // positive case
       summ += d[s[i]];
     }
   }
